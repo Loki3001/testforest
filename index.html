@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest Health Predictor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>🌲 Forest Health Predictor 🌿</h1>
+        <form id="forestHealthForm">
+            <div class="form-group">
+                <label for="treeHeight">Tree Height (m)</label>
+                <input type="number" step="0.01" id="treeHeight" name="treeHeight" placeholder="Enter tree height" required>
+            </div>
+            <div class="form-group">
+                <label for="dbh">Diameter at Breast Height (cm)</label>
+                <input type="number" step="0.01" id="dbh" name="dbh" placeholder="Enter DBH" required>
+            </div>
+            <div class="form-group">
+                <label for="crownWidth">Crown Width (m)</label>
+                <input type="number" step="0.01" id="crownWidth" name="crownWidth" placeholder="Enter crown width" required>
+            </div>
+            <div class="form-group">
+                <label for="soilTN">Soil Total Nitrogen</label>
+                <input type="number" step="0.01" id="soilTN" name="soilTN" placeholder="Enter soil total nitrogen" required>
+            </div>
+            <div class="form-group">
+                <label for="soilTP">Soil Total Phosphorus</label>
+                <input type="number" step="0.01" id="soilTP" name="soilTP" placeholder="Enter soil total phosphorus" required>
+            </div>
+            <div class="form-group">
+                <label for="soilAP">Soil Available Phosphorus</label>
+                <input type="number" step="0.01" id="soilAP" name="soilAP" placeholder="Enter soil available phosphorus" required>
+            </div>
+            <div class="form-group">
+                <label for="fireRiskIndex">Fire Risk Index</label>
+                <input type="number" step="0.01" id="fireRiskIndex" name="fireRiskIndex" placeholder="Enter fire risk index" required>
+            </div>
+            <div class="form-group">
+                <label for="disturbanceLevel">Disturbance Level</label>
+                <input type="number" step="0.01" id="disturbanceLevel" name="disturbanceLevel" placeholder="Enter disturbance level" required>
+            </div>
+            <button type="submit" class="predict-btn">Predict Forest Health</button>
+        </form>
+        <div id="predictionResult" class="prediction-result"></div>
+        <div id="predictionDetails" class="prediction-details"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
